@@ -10,23 +10,15 @@ public class CalculatorUsingSwitchCase {
         System.out.println("enter second number ");
         double number2= sc.nextDouble();
         double result;
-        switch (operator)
-        {
-            case '+':
-                result = number1+number2;
-                break;
-            case '-':
-                result = number1 - number2;
-                break;
-            case '*':
-                result = number1 * number2;
-                break;
-            case '/':
-                result = number1 / number2;
-                break;
-            default:
+        switch (operator) {
+            case '+' -> result = number1 + number2;
+            case '-' -> result = number1 - number2;
+            case '*' -> result = number1 * number2;
+            case '/' -> result = number1 / number2;
+            default -> {
                 System.out.println("Error ! operator is not correct ");
                 return;
+            }
         }
         System.out.println(number1 + " " + operator + " " + number2 + " = " + result );
     }
